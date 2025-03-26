@@ -62,7 +62,7 @@ void quiz6()
 
 void quiz7()
 {
-
+    a
 }
 
 
