@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <math.h>
 #include <stdbool.h>
 
@@ -17,18 +17,18 @@ void main()
     bool isGameOver = false;
     int num;
 
-    printf("���Ӽ���Ʈ�����а� - 5723717 - ��ȫ��\n\n");
+    printf("게임소프트웨어학과 - 5723717 - 조홍준\n\n");
 
     while (!isGameOver)
     {
-        printf("������ ��ȣ(4 ~ 12)�� �Է��ϼ���(0�� �Է��ϸ� ����): ");
+        printf("문제의 번호(4 ~ 12)를 입력하세요(0을 입력하면 종료): ");
         scanf_s("%d", &num);
 
         switch (num)
         {
         case 0:
-            printf("\n���α׷��� �����մϴ�.\n");
-            printf("\n���Ӽ���Ʈ�����а� - 5723717 - ��ȫ��\n");
+            printf("\n프로그램을 종료합니다.\n");
+            printf("\n게임소프트웨어학과 - 5723717 - 조홍준\n");
             isGameOver = true;
             break;
 
@@ -60,14 +60,16 @@ void main()
             break;
 
         default:
-            printf("���ڸ� �߸� �Է��Ͽ����ϴ�.\n");
+            printf("숫자를 잘못 입력하였습니다.\n");
         }
     }
 }
 
 void quiz4()
 {
-    printf("Quiz 4 : \n");
+    printf("04 크기가 10인 배열 two[]를 선언하고 여기에 2의 제곱 값을 저장해보자.\n");
+    printf("즉, 배열의 첫 번째 요소에는 2⁰을 저장하고 두 번째 요소에는 2¹값을 저장한다. 마지막 요소에는 2⁹값을 저장한다.\n");
+    printf("for 루프를 이용하여 two[] 배열의 전체 요소의 값을 출력하는 프로그램을 작성하라.\n");
 
     int two[10];
 
@@ -78,7 +80,7 @@ void quiz4()
 
     for (int i = 0; i < 10; i++)
     {
-        printf("two[%d]�� ��: %d\n", i, two[i]);
+        printf("two[%d]의 값: %d\n", i, two[i]);
     }
 }
 

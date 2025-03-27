@@ -1,5 +1,7 @@
-﻿  quiz.c
-C:\Users\everg\project\Homework\quiz_01\quiz.c(76,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\everg\project\Homework\quiz_01\quiz.c(114,13): warning C4101: 'c1' :참조되지 않은 지역 변수입니다.
-C:\Users\everg\project\Homework\quiz_01\quiz.c(115,13): warning C4101: 'c2' :참조되지 않은 지역 변수입니다.
+﻿  chap3.c
+C:\Users\everg\project\Homework\quiz_01\chap3.c(71,12): warning C4566: 유니버설 문자 이름 '\u2070'(으)로 표현되는 문자는 현재 코드 페이지(949)에서 표현할 수 없습니다.
+C:\Users\everg\project\Homework\quiz_01\chap3.c(71,12): warning C4566: 유니버설 문자 이름 '\u2079'(으)로 표현되는 문자는 현재 코드 페이지(949)에서 표현할 수 없습니다.
+C:\Users\everg\project\Homework\quiz_01\chap3.c(78,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\everg\project\Homework\quiz_01\chap3.c(116,13): warning C4101: 'c1' :참조되지 않은 지역 변수입니다.
+C:\Users\everg\project\Homework\quiz_01\chap3.c(117,13): warning C4101: 'c2' :참조되지 않은 지역 변수입니다.
   quiz_01.vcxproj -> C:\Users\everg\project\Homework\x64\Debug\quiz_01.exe
