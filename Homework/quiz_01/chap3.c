@@ -19,7 +19,7 @@ void main()
 
     printf("게임소프트웨어학과 - 5723717 - 조홍준\n\n");
 
-    while (isGameOver != true)
+    while (!isGameOver)
     {
         printf("문제의 번호(4 ~ 12)를 입력하세요(0을 입력하면 종료): ");
         scanf_s("%d", &num);
