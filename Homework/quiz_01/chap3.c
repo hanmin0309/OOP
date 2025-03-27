@@ -86,7 +86,8 @@ void quiz4()
 
 void quiz5()
 {
-    printf("Quiz 5 : \n");
+    printf("05 person이라는 구조체를 만들어보자.\n");
+    printf("이 구조체에는 문자 배열로 된 이름, 사람의 나이를 나타내는 정수 값, 각 개인의 월급을 나타내는 float 값 등이 변수로 들어가야 한다.\n");
 
     printf("struct Person\n");
     printf("{\n");
