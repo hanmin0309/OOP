@@ -1,5 +1,69 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdbool.h>
+
+void quiz4();
+void quiz5();
+void quiz6();
+void quiz7();
+void quiz8();
+void quiz9();
+void quiz10();
+void quiz11();
+void quiz12();
+
+void main()
+{
+    bool isGameOver = false;
+    int num;
+
+    printf("게임소프트웨어학과 - 5723717 - 조홍준\n\n");
+
+    while (isGameOver != true)
+    {
+        printf("문제의 번호(4 ~ 12)를 입력하세요(0을 입력하면 종료): ");
+        scanf_s("%d", &num);
+
+        switch (num)
+        {
+        case 0:
+            printf("\n프로그램을 종료합니다.\n");
+            printf("\n게임소프트웨어학과 - 5723717 - 조홍준\n");
+            isGameOver = true;
+            break;
+
+        case 4: quiz4();
+            break;
+
+        case 5: quiz5();
+            break;
+
+        case 6: quiz6();
+            break;
+
+        case 7: quiz7();
+            break;
+
+        case 8: quiz8();
+            break;
+
+        case 9: quiz9();
+            break;
+
+        case 10: quiz10();
+            break;
+
+        case 11: quiz11();
+            break;
+
+        case 12: quiz12();
+            break;
+
+        default:
+            printf("숫자를 잘못 입력하였습니다.\n");
+        }
+    }
+}
 
 void quiz4()
 {
@@ -56,23 +120,37 @@ void quiz6()
     printf("    float imaginary;\n");
     printf("} Complex;\n");
     printf("\n");
-    printf("Complex c1\n");
-    printf("Complex c2\n;");
+    printf("Complex c1;\n");
+    printf("Complex c2;\n");
 }
 
 void quiz7()
 {
-    a
+    
 }
 
-
-
-
-
-int main()
+void quiz8()
 {
-    quiz4();
-    quiz5();
-    quiz6();
-    return 0;
+
 }
+
+void quiz9()
+{
+
+}
+
+void quiz10()
+{
+
+}
+
+void quiz11()
+{
+
+}
+
+void quiz12()
+{
+
+}
+
