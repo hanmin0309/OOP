@@ -5,3 +5,6 @@
 /.vs
 /Homework/.vs/Homework
 /Homework/project
+/Homework/test/test.vcxproj
+/Homework/test/test.vcxproj.filters
+/Homework/test
