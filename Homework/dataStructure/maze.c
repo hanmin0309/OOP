@@ -3,19 +3,19 @@
 
 char map[MAZE_SIZE][MAZE_SIZE] = {
     {'1', '1', '1', '1', '1', '1'},
-    {'e', '0', '0', '0', '0', '1'},
+    {'2', '0', '0', '0', '0', '1'},
     {'1', '0', '1', '0', '1', '1'},
-    {'1', '1', '1', '0', '0', 'x'},
+    {'1', '1', '1', '0', '0', '3'},
     {'1', '1', '1', '0', '1', '1'},
     {'1', '1', '1', '1', '1', '1'}
 };
 
 void push_loc(stack* s, int r, int c)
 {
-    if ( r < 0 || c < 0 || r >= MAZE_SIZE || c >= MAZE_SIZE)
-        return ;
+    if (r < 0 || c < 0 || r >= MAZE_SIZE || c >= MAZE_SIZE)
+        return;
 
-    if(map[r][c] != '1' && map[r][c] != '.')
+    if (map[r][c] != '1' && map[r][c] != '.')
     {
         element tmp;
         tmp.r = r;
@@ -28,44 +28,64 @@ void randering()
 {
     for (int r = 0; r < MAZE_SIZE; r++) {
         for (int c = 0; c < MAZE_SIZE; c++) {
-            printf("%c", map[r][c]);
+            switch (map[r][c]) {
+            case '0': printf("¡à");
+                break;
+
+            case '1': printf("¡á");
+                break;
+
+            case '2': printf("¡¤");
+                break;
+
+            case '3': printf("¡Ú");
+                break;
+
+            case '4': printf("¡Ø");
+                break;
+
+            default: printf("%c", map[r][c]);
+                break;
+            }
         }
         printf("\n");
     }
-    
+
 }
 
 void main()
 {
-    element here = {1, 0}; // {y, x}, x y í—·ê¹”ë¦¬ì§€ ë§ê²ƒ.    
-    
+    element here = { 1, 0 }; // {y, x}, x y Çò±ò¸®Áö ¸»°Í.    
+
     stack s;
 
     init_stack(&s);
 
-    while (map[here.r][here.c] != 'x')
+    while (map[here.r][here.c] != '3')
     {
         /* code */
-        map[here.r][here.c] = '.';
-        push_loc(&s, here.r-1, here.c);
-        push_loc(&s, here.r+1, here.c);
-        push_loc(&s, here.r, here.c-1);
-        push_loc(&s, here.r, here.c+1);
+        map[here.r][here.c] = '4';
+        push_loc(&s, here.r - 1, here.c);
+        push_loc(&s, here.r + 1, here.c);
+        push_loc(&s, here.r, here.c - 1);
+        push_loc(&s, here.r, here.c + 1);
 
         if (is_empty(&s))
         {
-            printf("ì‹¤íŒ¨\n");
+            printf("½ÇÆÐ\n");
             return;
         }
+
         else
             here = pop(&s);
-    
+
         randering();
 
-        printf("\nê³„ì† ì¶œë ¥í•˜ë ¤ë©´, ì•„ë¬´í‚¤ë‚˜ ìž…ë ¥í•˜ì„¸ìš”.\n");
+        printf("\n°è¼Ó Ãâ·ÂÇÏ·Á¸é, ¾Æ¹«Å°³ª ÀÔ·ÂÇÏ¼¼¿ä.\n");
         getchar();
-        system("cls");
+         system("cls");
+        map[here.r][here.c] = '2';
     }
-    
-    printf("ì„±ê³µ");
+
+    printf("¼º°ø");
 }
