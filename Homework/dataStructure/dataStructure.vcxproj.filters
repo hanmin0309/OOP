@@ -18,5 +18,13 @@
     <ClCompile Include="chap3.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="maze.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stack.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

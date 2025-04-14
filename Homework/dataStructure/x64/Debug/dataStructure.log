@@ -1,13 +1,6 @@
-﻿  chap3.c
-C:\school\homework\Homework\dataStructure\chap3.c(95,12): warning C4566: 유니버설 문자 이름 '\u2070'(으)로 표현되는 문자는 현재 코드 페이지(949)에서 표현할 수 없습니다.
-C:\school\homework\Homework\dataStructure\chap3.c(95,12): warning C4566: 유니버설 문자 이름 '\u2079'(으)로 표현되는 문자는 현재 코드 페이지(949)에서 표현할 수 없습니다.
-C:\school\homework\Homework\dataStructure\chap3.c(118,18): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\school\homework\Homework\dataStructure\chap3.c(180,19): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
-C:\school\homework\Homework\dataStructure\chap3.c(180,28): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
-C:\school\homework\Homework\dataStructure\chap3.c(181,19): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
-C:\school\homework\Homework\dataStructure\chap3.c(181,25): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
-C:\school\homework\Homework\dataStructure\chap3.c(242,19): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
-C:\school\homework\Homework\dataStructure\chap3.c(242,24): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
-C:\school\homework\Homework\dataStructure\chap3.c(243,19): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
-C:\school\homework\Homework\dataStructure\chap3.c(243,24): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
-  dataStructure.vcxproj -> C:\school\homework\Homework\x64\Debug\dataStructure.exe
+﻿  maze.c
+C:\Users\everg\project\Homework\dataStructure\stack.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
+  (소스 파일 'maze.c'을(를) 컴파일하는 중)
+  
+C:\Users\everg\project\Homework\dataStructure\stack.h(46,1): warning C4715: 'pop': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  dataStructure.vcxproj -> C:\Users\everg\project\Homework\x64\Debug\dataStructure.exe
