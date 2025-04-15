@@ -13,27 +13,24 @@ class Monster {
 		if (y >= maxy) y = maxy - 1;
 	}
 
-	void eat(int map[DIM][DIM]) {
+	void eat(int** map) {
 		if (map[y][x] == 1) {
 			map[y][x] = 0;
 			nItem++;
 			nEnergy += 8;
 		}
 		
-		else if (map[y][x] == 0) {
-			if (nEnergy > 0) nEnergy--;
-		}
+		else if (map[y][x] == 0 && nEnergy > 0) nEnergy--;
 	}
 
 public:
 	Monster(string n = "³ª±«¹°", string i = "¡Ø", int px = 0, int py = 0)
 		: name(n), icon(i), x(px), y(py), nItem(0), nEnergy(100) { }
-
 	~Monster() { cout << "\t" << name << icon << " ¹°·¯°©´Ï´Ù~~~\n"; }
 
 	void draw(Canvas &canvas) { canvas.draw(x, y, icon); }
 
-	void move(int map[DIM][DIM], int maxx, int maxy) {
+	void move(int** map, int maxx, int maxy) {
 		switch (rand() % 8) {
 		case 0: y--; break;
 		case 1: x++; y--; break;
@@ -44,7 +41,6 @@ public:
 		case 6: x--; break;
 		case 7: x--; y--; break;
 		}
-
 		clip(maxx, maxy);
 		eat(map);
 	}

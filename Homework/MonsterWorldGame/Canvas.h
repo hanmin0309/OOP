@@ -31,5 +31,4 @@ public:
 			cout << line[y] << endl;
 		cout << endl;
 	}
-
 };
