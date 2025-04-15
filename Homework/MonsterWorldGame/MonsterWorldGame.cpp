@@ -1,9 +1,12 @@
 #include "MonsterWorld.h"
 #include <time.h>
+
+int Monster::count = 0;
+
 void main()
 {
 	srand((unsigned int)time(NULL));
-	int w = 16, h = 8;
+	int w = 50, h = 7;
 	MonsterWorld game(w, h);
 
 	game.add(new Monster("∏ÛΩ∫≈Õ", "°ÿ", rand() % w, rand() % h));

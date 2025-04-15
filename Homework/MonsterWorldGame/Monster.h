@@ -4,7 +4,8 @@
 
 class Monster {
 	string name, icon;
-	int x, y, nItem;
+	static int count;
+	int x, y, nItem, nEnergy;
 
 	void clip(int maxx, int maxy) {
 		if (x < 0) x = 0;
@@ -19,21 +20,20 @@ class Monster {
 			nItem++;
 			nEnergy += 8;
 		}
-		
 		else if (map[y][x] == 0 && nEnergy > 0) nEnergy--;
 	}
 
-private:
-	int nEnergy;
-
 public:
+
 	Monster(string n = "나괴물", string i = "※", int px = 0, int py = 0)
-		: name(n), icon(i), x(px), y(py), nItem(0), nEnergy(100) { }
-	~Monster() { cout << "\t" << name << icon << " 물러갑니다~~~\n"; }
+		: name(n), icon(i), x(px), y(py), nItem(0), nEnergy(100) { count++; }
+	~Monster() { cerr << "\t" << name << icon << " 물러갑니다~~~\n"; count--; }
+
+	void draw(Canvas &canvas) { canvas.draw(x, y, icon); }
 
 	int getEnergy() { return nEnergy; }
 
-	void draw(Canvas &canvas) { canvas.draw(x, y, icon); }
+	static void printCount() { cout << "전체 몬스터의 수: " << count << endl; }
 
 	void move(int** map, int maxx, int maxy) {
 		switch (rand() % 8) {
@@ -46,6 +46,7 @@ public:
 		case 6: x--; break;
 		case 7: x--; y--; break;
 		}
+
 		clip(maxx, maxy);
 		eat(map);
 	}
