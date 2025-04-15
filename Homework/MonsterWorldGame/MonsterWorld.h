@@ -37,6 +37,7 @@ class MonsterWorld {
 			pMon[i]->print();
 	}
 
+
 public:
 	MonsterWorld(int w, int h) : world(h, w), canvas(w, h), xMax(w), yMax(h) {
 		nMon = 0;
@@ -52,6 +53,10 @@ public:
 	void add(Monster* m) {
 		if (nMon < MAXMONS) 
 			pMon[nMon++] = m;
+	}
+
+	void checkEnergy() {
+
 	}
 
 	void play(int maxwalk, int wait) {
