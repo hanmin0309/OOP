@@ -1,3 +1,3 @@
 ﻿  MonsterWorldGame.cpp
-C:\school\homework\Homework\MonsterWorldGame\MonsterWorldGame.cpp(6,6): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
-  MonsterWorldGame.vcxproj -> C:\school\homework\Homework\x64\Debug\MonsterWorldGame.exe
+C:\Users\everg\project\Homework\MonsterWorldGame\MonsterWorldGame.cpp(7,6): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  MonsterWorldGame.vcxproj -> C:\Users\everg\project\Homework\x64\Debug\MonsterWorldGame.exe

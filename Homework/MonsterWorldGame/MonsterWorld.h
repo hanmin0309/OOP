@@ -1,4 +1,4 @@
-#pragma once
+Ôªø#pragma once
 #include "Canvas.h"
 #include "Monster.h"
 #include "Matrix.h"
@@ -27,13 +27,13 @@ class MonsterWorld {
 		canvas.clear();
 		for (int y = 0; y < yMax; y++)
 			for (int x = 0; x < xMax; x++)
-				if (Map(x, y) > 0) canvas.draw(x, y, "°·");
+				if (Map(x, y) > 0) canvas.draw(x, y, "‚ñ†");
 
 		for (int i = 0; i < nMon; i++)
 			pMon[i]->draw(canvas);
-		canvas.print("[ Monster World (∏ÛΩ∫≈ÕµÈ¿« ººªÛ) ]");
-		cerr << " ¿¸√º ¿Ãµø »Ωºˆ = " << nMove << endl;
-		cerr << " ≥≤¿∫ æ∆¿Ã≈€ ºˆ = " << countItems() << endl;
+		canvas.print("[ Monster World (Î™¨Ïä§ÌÑ∞Îì§Ïùò ÏÑ∏ÏÉÅ) ]");
+		cerr << " Ï†ÑÏ≤¥ Ïù¥Îèô ÌöüÏàò = " << nMove << endl;
+		cerr << " ÎÇ®ÏùÄ ÏïÑÏù¥ÌÖú Ïàò = " << countItems() << endl;
 		for (int i = 0; i < nMon; i++)
 			pMon[i]->print();
 		Monster::printCount();
@@ -44,11 +44,11 @@ class MonsterWorld {
 			if (pMon[i]->getEnergy() == 0) {
 				delete pMon[i];
 				pMon[i] = pMon[--nMon];
-				cout << "Monster «œ≥™∞° ±ææÓ¡◊Ω¿¥œ¥Ÿ" << endl;
+				cout << "Monster ÌïòÎÇòÍ∞Ä Íµ∂Ïñ¥Ï£ΩÏäµÎãàÎã§" << endl;
 			}
 
 			else {
-				i++; // 0π¯¿⁄∏Æø° 5π¯¿Ã µÈæÓø¿∏È ¥ŸΩ√ ∞ÀªÁ∏¶ ∏¯«œ±‚ ∂ßπÆø°, ºˆµø¿∏∑Œ ¡∂¿€«œ¥¬∞≈¿”.
+				i++; // 0Î≤àÏûêÎ¶¨Ïóê 5Î≤àÏù¥ Îì§Ïñ¥Ïò§Î©¥ Îã§Ïãú Í≤ÄÏÇ¨Î•º Î™ªÌïòÍ∏∞ ÎïåÎ¨∏Ïóê, ÏàòÎèôÏúºÎ°ú Ï°∞ÏûëÌïòÎäîÍ±∞ÏûÑ.
 			}
 		}
 	}
@@ -73,7 +73,7 @@ public:
 
 	void play(int maxwalk, int wait) {
 		print();
-		cerr << " ø£≈Õ∏¶ ¥©∏£ººø‰...";
+		cerr << " ÏóîÌÑ∞Î•º ÎàÑÎ•¥ÏÑ∏Ïöî...";
 		getchar();
 		for (int i = 0; i < maxwalk; i++) {
 			for (int k = 0; k < nMon; k++)

@@ -3,6 +3,7 @@
 #define DIM 40
 
 class Monster {
+protected:
 	string name, icon;
 	static int count;
 	int x, y, nItem, nEnergy;
