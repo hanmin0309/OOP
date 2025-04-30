@@ -128,6 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="canvas.h" />
     <ClInclude Include="horse.h" />
   </ItemGroup>
   <ItemGroup>
