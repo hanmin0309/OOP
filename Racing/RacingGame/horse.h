@@ -1,4 +1,4 @@
-// CPU Horse µğÀÚÀÎ
+ï»¿// CPU Horse ë””ìì¸
 
 class Horse
 {
