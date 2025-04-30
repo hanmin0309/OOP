@@ -1,6 +1,0 @@
-﻿  main.cpp
-C:\school\Racing\RacingGame\main.cpp(1,1): warning C4828: 파일에 0x3 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\school\Racing\RacingGame\main.cpp(1,1): warning C4828: 파일에 0x4 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-C:\school\Racing\RacingGame\main.cpp(1,1): warning C4828: 파일에 0x6 오프셋에서 시작하는 문자가 포함되어 있습니다. 이 문자는 현재 원본 문자 집합에서 잘못된 문자입니다(코드 페이지 65001).
-MSVCRTD.lib(exe_main.obj) : error LNK2019: main"int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
-C:\school\Racing\x64\Debug\RacingGame.exe : fatal error LNK1120: 1개의 확인할 수 없는 외부 참조입니다.
