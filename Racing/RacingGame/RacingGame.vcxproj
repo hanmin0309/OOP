@@ -134,6 +134,7 @@
   <ItemGroup>
     <ClInclude Include="canvas.h" />
     <ClInclude Include="horse.h" />
+    <ClInclude Include="race.h" />
     <ClInclude Include="training.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

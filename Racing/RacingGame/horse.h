@@ -31,10 +31,8 @@ protected:
     // 스텟별 가중치
     double breed_mod[3];      // 품종 보정치 0: 초반 / 1: 중반 / 2: 후반
     double stat_mod[3];       // 스탯 보정치 0: 초반 / 1: 중반 / 2: 후반
+
 public:
-
-    // 기본 생성자
-
     // CPU용 생성자
     horse(std::string name, int breed, int tier)
         : type(CPU), name(name), breed(breed) {
@@ -97,13 +95,15 @@ public:
     int get_pow() { return pow; }               // 파워 리턴
     int get_sta() { return sta; }               // 스태미나 리턴
     int get_guts() { return guts; }             // 근성 리턴
-    int get_breed() { return breed; }             // 타입 리턴
+    int get_breed() { return breed; }           // 품종 리턴
+
+
 
     // 스탯 추가용 setter
     void set_spd(int n) { this->spd += n; }     // 스피드 증가
     void set_pow(int n) { this->pow += n; }     // 파워 증가
     void set_sta(int n) { this->sta += n; }     // 스태미나 증가 (오타 수정)
-    void set_guts(int n) { this->guts += n; } // 근성 증가
+    void set_guts(int n) { this->guts += n; }   // 근성 증가
 
     // 현재 위치가 어느 구간인지 반환 (0: 초반 / 1: 중반 / 2: 후반)
     int position() const {
@@ -139,6 +139,10 @@ public:
 
     // 현재 위치 반환 (외부 조회용)
     int get_position() const { return curr_pos; }
+
+    // 이전 위치 반환 (외부 조회용)
+    int get_prev_pos() const { return prev_pos; }
+
 };
 
 
