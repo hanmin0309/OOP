@@ -14,7 +14,7 @@ private:
     Canvas canvas;
 
     int lane = rand() % HORSE_COUNT; // 플레이어 라인 추첨;
-    std::array<int, 6> cpu_type = { 0, 1, 1, 2, 2, 3 }; //cpu 특성 배열(셔플 사용을 위해 사용)
+    std::array<int, 6> cpu_type = { 0, 1, 1, 2, 2, 3 }; //cpu 특성 배열
 
     horse horses[HORSE_COUNT];       // 빈 말 배열 생성
     bool finished[HORSE_COUNT] = {}; // 말이 결승선에 도착여부 확인
@@ -36,12 +36,14 @@ public:
 
     void tie_breaker() { // 동석차 검사
         for (int i = 0; i < HORSE_COUNT; i++) {
-            int rank = 1;
-            for (int j = 0; j < HORSE_COUNT; j++) {
-                if (horses[i].get_position() < horses[j].get_position()) {
-                    rank++;
+            if (finished[i]) { // 결승선에 도달한 말만 등수 계산
+                int rank = 1;
+                for (int j = 0; j < HORSE_COUNT; j++) {
+                    if (finished[j] && horses[i].get_position() < horses[j].get_position()) {
+                        rank++;
+                    }
                 }
-            horses[i].set_rank(rank);
+                horses[i].set_rank(rank);
             }
         }
     }
@@ -50,7 +52,7 @@ public:
         for (int i = 0; i < HORSE_COUNT; ++i) {
             std::cout << i + 1 << "레인 | " << horses[i].get_name();
 
-            if (horses[i].get_rank() > 0) {
+            if (horses[i].get_rank() > 0) { // 등수가 있는 경우에만 등수 출력
                 std::cout << " | 등수: " << horses[i].get_rank();
             }
 
@@ -70,8 +72,10 @@ public:
 
                 horses[i].move(); // 말 이동
 
-                int prev_pos = horses[i].get_prev_pos();
-                int curr_pos = horses[i].get_position();
+                int prev_pos = horses[i].get_prev_pos(); // 이전 위치
+                int curr_pos = horses[i].get_position(); // 이동한 위치
+
+                std::cout << i << " 이전 위치: " << horses[i].get_prev_pos() << " | 이동한 위치 " << horses[i].get_position() << std::endl;
 
                 if (curr_pos >= 60) {
                     canvas.set_tile(i, 60, prev_pos); // 결승선에 도달한 말 위치 고정
@@ -83,13 +87,14 @@ public:
                 else {
                     canvas.set_tile(i, curr_pos, prev_pos); // 일반 이동 처리
                 }
-
-                canvas.printMap();
-                show_race_summary();
-                getchar();
-                //Sleep(500);
-                //system("cls");
             }
+
+            canvas.printMap();
+            show_race_summary();
+            getchar();
+            system("cls");
+            //Sleep(500);
+
         }
     }
 };

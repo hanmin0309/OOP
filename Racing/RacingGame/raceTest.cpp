@@ -15,7 +15,7 @@ int main() {
     horse playerHorse("썬더볼트", 1, 1000, 950, 900, 850);
 
     // 레이스 객체 생성 (플레이어 말, 티어)
-    int tier = 2; // 티어 값 (1이 가장 어려움, 숫자가 커질수록 쉬움)
+    int tier = 6; // 티어 값
     Race race(playerHorse, tier);
 
     // 레이스 시작

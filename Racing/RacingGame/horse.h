@@ -42,6 +42,8 @@ public:
         : type(CPU), name(name), breed(breed) {
         set_ai_stats(breed, tier);
         set_modifiers(breed);
+        std::cout << "Horse Created: " << name << ", Breed: " << breed << ", Tier: " << tier << std::endl;
+        std::cout << "Stats - Speed: " << spd << ", Stamina: " << sta << ", pow: " << pow << ", Guts: " << guts << std::endl;
     }
 
     // 플레이어용 생성자
