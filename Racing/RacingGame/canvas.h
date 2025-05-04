@@ -32,7 +32,7 @@ public:
                 else if (map[h][w] != 0) {
                     std::cout << map[h][w]; isH = true;
                 }
-                else if (!isH)std::cout << 'ㆍ';
+                else if (!isH)std::cout << '.';
                 else std::cout << ' ';
             }
             std::cout << '\n'; 
