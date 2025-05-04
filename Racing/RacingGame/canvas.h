@@ -2,14 +2,14 @@
 #define CANVAS_H
 #include <iostream>
 
-class canvas {
+class Canvas {
 private:
     static const int WIDTH = 61; // 마지막에 | 결승선임 (경기장 크기는 60)
     static const int HEIGHT = 7;
     int map[HEIGHT][WIDTH];
 
 public:
-    canvas() {
+    Canvas() {
         for (int y = 0; y < HEIGHT; ++y)
             for (int x = 0; x < WIDTH; ++x) {
                 map[y][x] = 0;  // 맵을 모두 초기화
